@@ -1,0 +1,170 @@
+/* ================= ROOT ================= */
+.tp-root {
+    width: 97%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 0 24px;
+    display: flex;
+    flex-direction: column;
+  background: linear-gradient(135deg, #e0f2f1, #b2dfdb, #80cbc4);
+
+    gap: 16px;
+    font-family: "Segoe UI", system-ui;
+  }
+  
+  /* ================= TITLE ================= */
+  .tp-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b2b4a;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  /* ================= TOTAL PLACES STAT ================= */
+  .tp-stats-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tp-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #062361, #557be2d0);
+    color: white;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 180px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .tp-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tp-stat-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .tp-stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .tp-stat-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* ================= ADD BUTTON ================= */
+  .tp-add-btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    background: #0c4a6e;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  /* ================= FORM ================= */
+  .tp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tp-form input,
+  .tp-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .tp-form textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  .tp-form input:focus,
+  .tp-form textarea:focus {
+    border-color: #2563eb;
+  }
+  
+  .tp-directions-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  
+  .tp-directions-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+  
+  .tp-cancel-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    background: #7a1d1d;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* ================= TOURIST PLACE CARDS ================= */
+  .tp-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  
+  .tp-card {
+    padding: 12px !important;
+  }
+  
+  /* ================= DELETE BUTTON ================= */
+  .tp-delete-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #8b1d1d;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 480px) {
+    .tp-stat-card {
+      width: 140px;
+      padding: 14px 16px;
+    }
+  
+    .tp-stat-icon {
+      font-size: 28px;
+    }
+  
+    .tp-stat-value {
+      font-size: 22px;
+    }
+  
+    .tp-stat-title {
+      font-size: 13px;
+    }
+  }
+  

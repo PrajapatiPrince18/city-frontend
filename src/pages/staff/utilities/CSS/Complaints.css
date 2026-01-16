@@ -1,0 +1,171 @@
+/* =========================================
+   COMPLAINTS PAGES — NAMESPACE: wc-
+   Works for Water, Road, Electricity, etc.
+========================================= */
+
+.wc-root {
+    min-height: 100vh;
+    padding: 28px 24px;
+    padding-top: 20px; /* space for fixed header */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: "Segoe UI", system-ui;
+    background: linear-gradient(135deg, #e0f2f1, #b2dfdb, #80cbc4);
+  }
+  
+  /* ================= PAGE TITLE ================= */
+  .wc-root h2 {
+    font-size: 28px;
+    color: #1e2a47;
+    margin-bottom: 6px;
+  }
+  
+  .wc-root p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  
+  /* ================= STATS CARDS GRID ================= */
+  .wc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  
+  .wc-stats-grid .glass-card {
+    padding: 18px;
+    text-align: center;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(200,200,200,.45);
+    box-shadow: 0 14px 30px rgba(0,0,0,.12);
+    transition: all 0.25s ease;
+  }
+  
+  .wc-stats-grid .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 34px rgba(0,0,0,.16);
+  }
+  
+  .wc-stats-grid h3 {
+    margin: 0 0 8px;
+    color: #142b4d;
+    font-size: 18px;
+  }
+  
+  .wc-stats-grid p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e2a47;
+  }
+  
+  /* ================= TABLE ================= */
+  .wc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  }
+  
+  .wc-table th,
+  .wc-table td {
+    padding: 12px 14px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .wc-table th {
+    background: rgba(30,60,114,0.1);
+    color: #1e2a47;
+    font-weight: 600;
+  }
+  
+  .wc-table tr:nth-child(even) {
+    background: rgba(255,255,255,.7);
+  }
+  
+  .wc-table tr:nth-child(odd) {
+    background: rgba(245,245,245,.7);
+  }
+  
+  .wc-table td button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    background: #1e3c72;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .wc-table td button:hover {
+    background: #0f2a55;
+  }
+  
+  /* ================= STATUS BADGES ================= */
+  .wc-status {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-block;
+  }
+  
+  .wc-ok { background: #daf7e3; color: #0f7b2c; }
+  .wc-warn { background: #fff3cd; color: #a17800; }
+  .wc-info { background: #d0e7ff; color: #0a5aa8; }
+  
+  /* ================= ACTION BUTTONS ================= */
+  .wc-actions button {
+    margin-right: 6px;
+  }
+  
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 1024px) {
+    .wc-stats-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wc-root {
+      padding: 20px 16px;
+      padding-top: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .wc-root {
+      padding: 16px 12px;
+    }
+  
+    .wc-stats-grid .glass-card {
+      padding: 14px;
+    }
+  
+    .wc-stats-grid h3 {
+      font-size: 16px;
+    }
+  
+    .wc-stats-grid p {
+      font-size: 20px;
+    }
+  
+    .wc-table th,
+    .wc-table td {
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+  
+    .wc-table td button {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+  

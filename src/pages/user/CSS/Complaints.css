@@ -1,0 +1,198 @@
+/* ================= ROOT ================= */
+.complaints-root {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff1f2, #ffe4e6, #fecdd3);
+
+}
+
+/* ================= HEADING ================= */
+.complaints-root h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0b2b4a;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ================= GLASS CARD ================= */
+.complaints-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.complaints-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= FORM STYLING ================= */
+.complaints-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.complaints-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0b2b4a;
+}
+
+.complaints-form input,
+.complaints-form select,
+.complaints-form textarea {
+  margin-top: 5px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.complaints-form input:focus,
+.complaints-form select:focus,
+.complaints-form textarea:focus {
+  outline: none;
+  border-color: #0a5aa8;
+  box-shadow: 0 0 5px rgba(10, 90, 168, 0.3);
+}
+
+.complaint-submit-btn {
+  padding: 10px 16px;
+  background-color: #0a5aa8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.complaint-submit-btn:hover {
+  background-color: #084880;
+  transform: scale(1.03);
+}
+
+/* ================= TABLE STYLING ================= */
+.complaints-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.complaints-table th,
+.complaints-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.complaints-table th {
+  background-color: #0a5aa8;
+  color: #fff;
+  font-weight: 600;
+}
+
+.complaints-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.complaints-table tbody tr:hover {
+  background-color: rgba(10, 90, 168, 0.05);
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* ================= STATUS BADGES (SMALLER) ================= */
+.status {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.75rem;
+  min-width: 75px;
+}
+
+.status.pending {
+  background-color: rgba(255, 165, 0, 0.2);
+  color: orange;
+}
+
+.status.in-progress {
+  background-color: rgba(0, 123, 255, 0.2);
+  color: #007bff;
+}
+
+.status.resolved {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+}
+
+/* ================= BUTTONS IN TABLE ================= */
+.complaint-action-btn {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.complaint-action-btn:hover {
+  opacity: 0.8;
+}
+
+.complaint-action-call {
+  background-color: #0a5aa8;
+  color: #fff;
+}
+
+.complaint-action-update {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .complaints-table,
+  .complaints-table th,
+  .complaints-table td {
+    font-size: 0.8rem;
+  }
+
+  .complaints-form input,
+  .complaints-form select,
+  .complaints-form textarea {
+    font-size: 0.85rem;
+  }
+
+  .complaint-submit-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .status {
+    font-size: 0.65rem;
+    min-width: 60px;
+  }
+
+  .complaint-action-btn {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+  }
+}

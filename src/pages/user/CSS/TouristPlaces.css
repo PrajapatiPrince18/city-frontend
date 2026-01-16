@@ -1,0 +1,134 @@
+/* ================= ROOT STYLES ================= */
+.tep-root {
+  padding: 20px;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont;
+  background: linear-gradient(135deg, #fff1f2, #ffe4e6, #fecdd3);
+  min-height: 100vh;
+}
+
+/* ================= PAGE TITLE ================= */
+.tep-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #0b2b4a;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* ================= CARDS GRID ================= */
+.tep-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ================= INDIVIDUAL CARD ================= */
+.tep-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tep-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* ================= CARD IMAGE ================= */
+.tep-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.2s ease;
+}
+
+.tep-card:hover .tep-card-img {
+  transform: scale(1.05);
+}
+
+/* ================= CARD CONTENT ================= */
+.tep-card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tep-card-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0a5aa8;
+}
+
+.tep-card-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ================= GET DIRECTIONS BUTTON ================= */
+.tep-directions-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #fff;
+  background: #0a5aa8;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.tep-directions-btn:hover {
+  background: #072a58;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .tep-card-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tep-card-img {
+    height: 140px;
+  }
+  
+  .tep-title {
+    font-size: 1.8rem;
+  }
+  
+  .tep-card-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .tep-card-content p {
+    font-size: 0.9rem;
+  }
+  
+  .tep-directions-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ================= OPTIONAL ENHANCEMENTS ================= */
+/* Add subtle card hover gradient */
+.tep-card:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 90, 168, 0.05);
+  pointer-events: none;
+  border-radius: 16px;
+}

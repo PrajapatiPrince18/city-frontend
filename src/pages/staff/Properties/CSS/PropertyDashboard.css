@@ -1,0 +1,122 @@
+.pd-root {
+  min-height: 100vh;
+  width: 100%;
+  padding: 28px 24px;
+  padding-top: 20px;
+  background: linear-gradient(135deg, #e0f2f1, #b2dfdb, #80cbc4);
+  font-family: "Segoe UI", system-ui;
+}
+
+.pd-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.pd-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.pd-header h1 {
+  font-size: 30px;
+  color: #1e2a47;
+}
+
+.pd-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+.pd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-bottom: 26px;
+}
+
+.pd-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  border: 1px solid rgba(200,200,200,.45);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+  padding: 18px;
+  transition: all .25s ease;
+}
+
+.pd-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.16);
+}
+
+.pd-card-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.pd-stat-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.pd-section-title {
+  color: #1e2a47;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 24px 0 14px;
+}
+
+.pd-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.pd-table th,
+.pd-table td {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.pd-table th {
+  background: rgba(30, 60, 114, 0.1);
+  color: #1e2a47;
+}
+
+.pd-table tr:nth-child(even) {
+  background: rgba(255,255,255,.7);
+}
+
+.pd-table tr:nth-child(odd) {
+  background: rgba(245,245,245,.7);
+}
+
+.pd-status {
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.pd-occupied {
+  background: #daf7e3;
+  color: #0f7b2c;
+}
+
+.pd-vacant {
+  background: #ffd6d6;
+  color: #9b1111;
+}
+
+.pd-table button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #1e3c72;
+  color: white;
+  transition: all .25s ease;
+}
+
+.pd-table button:hover {
+  background: #30549a;
+}

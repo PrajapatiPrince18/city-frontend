@@ -1,0 +1,104 @@
+/* ================= GLASS CARD (Scoped) ================= */
+.gc-card {
+  width: 100%;
+  max-width: 100%;
+  padding: 24px 20px;
+  border-radius: 20px;
+
+  /* Solid clean card — NO BLUR */
+  background: rgba(255, 255, 255, 0.95);
+
+  /* remove blur */
+  /* backdrop-filter: blur(14px); */
+  /* -webkit-backdrop-filter: blur(14px); */
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+/* Hover effect with subtle shimmer */
+.gc-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gc-card:hover::before {
+  opacity: 1;
+  transform: rotate(45deg) translate(20px, 20px);
+}
+
+.gc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= CARD TITLE ================= */
+.gc-card-title {
+  margin: 0 0 12px 0;
+  font-size: 23px;
+  font-weight: 700;
+  color: #1e3c72;
+  letter-spacing: 0.2px;
+  pointer-events: auto;
+}
+
+/* ================= CARD CONTENT ================= */
+.gc-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+  pointer-events: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .gc-card {
+    padding: 20px 16px;
+  }
+
+  .gc-card-title {
+    font-size: 20px;
+  }
+
+  .gc-card-content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gc-card {
+    padding: 18px 14px;
+  }
+
+  .gc-card-title {
+    font-size: 18px;
+  }
+
+  .gc-card-content {
+    font-size: 13px;
+  }
+}

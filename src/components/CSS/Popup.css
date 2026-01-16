@@ -1,0 +1,65 @@
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-box {
+    width: 340px;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    animation: scaleIn 0.3s ease;
+  }
+  
+  /* TYPES */
+  .popup-box.success h3 { color: #2e7d32; }
+  .popup-box.error h3 { color: #c62828; }
+  .popup-box.info h3 { color: #1565c0; }
+  .popup-box.confirm h3 { color: #f57c00; }
+  
+  .popup-box p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #444;
+  }
+  
+  .popup-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn.ok {
+    background: #1976d2;
+    color: white;
+  }
+  
+  .btn.yes {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .btn.no {
+    background: #f44336;
+    color: white;
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  

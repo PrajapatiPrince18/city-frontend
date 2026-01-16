@@ -1,0 +1,97 @@
+.property-page {
+  padding: 28px 24px;
+  font-family: "Segoe UI", system-ui;
+  background: linear-gradient(135deg, #e0f2f1, #b2dfdb, #80cbc4);
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #1e2a47;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ===== Add / Allocate Form ===== */
+.alloc-card {
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.alloc-form,
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alloc-form label,
+.edit-form label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alloc-form input,
+.edit-form input,
+.alloc-form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.allocate-btn,
+.edit-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1e3c72;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.allocate-btn:hover,
+.edit-buttons button:hover {
+  background: #30549a;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ===== Properties Grid ===== */
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.property-card {
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(200, 200, 200, 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.property-card p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.edit-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #f5a623;
+  color: white;
+  cursor: pointer;
+}

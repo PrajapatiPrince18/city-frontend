@@ -1,0 +1,108 @@
+/* ================= MODERN GLASS SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.85);  /* soft glass look */
+  backdrop-filter: blur(12px);
+  box-shadow: 4px 0 18px rgba(0, 0, 0, 0.1);
+  border-radius: 0 20px 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  position: fixed;
+  top: 0;
+  left: -260px;
+  height: 100vh;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* OPEN STATE */
+.sidebar.open {
+  left: 0;
+}
+
+/* CLOSE BUTTON */
+.sidebar .close-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: #1e3c72;  /* deep accent blue */
+  font-size: 22px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 16px;
+  transition: 0.2s;
+}
+
+.sidebar .close-btn:hover {
+  color: #3a5ba0;
+}
+
+/* ================= MENU LIST ================= */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e3c72;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sidebar li:hover {
+  background: rgba(30, 60, 114, 0.08);
+  color: #0a5aa8;
+}
+
+/* ACTIVE ITEM */
+.sidebar li.active {
+  background: linear-gradient(135deg, #1fb6ff, #1488cc);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(20, 136, 204, 0.3);
+}
+
+/* ICON */
+.sidebar-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: inherit; /* matches text color */
+}
+
+.sidebar-text {
+  white-space: nowrap;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+    padding: 16px;
+  }
+
+  .sidebar .close-btn {
+    font-size: 20px;
+  }
+
+  .sidebar li {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}

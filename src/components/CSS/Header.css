@@ -1,0 +1,157 @@
+/* ================= MODERN GLASS HEADER ================= */
+.header {
+  width: 97%;
+  max-width: 1200px;        /* max width to center header */
+  margin: 0 auto;           /* center horizontally */
+  padding: 16px 24px;       /* top/bottom + left/right spacing */
+  display: flex;
+  align-items: center;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);  /* soft white glass */
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Hover effect */
+.header:hover {
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+/* Left side (menu) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 2;
+}
+
+/* Menu button */
+.menu-btn {
+  background: none;
+  border: none;
+  color: #1e3c72;  /* deep accent blue */
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-btn:hover {
+  color: #3a5ba0;
+}
+
+/* Title — centered absolutely */
+.header h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
+
+  background: linear-gradient(135deg, #1fb6ff, #1488cc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Right side (profile icon) */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* push it to the right */
+  z-index: 2;
+}
+
+/* Profile button */
+.profile-btn {
+  width: 46px;          /* button width */
+  height: 46px;         /* button height */
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* Hover effect for profile */
+.profile-btn:hover {
+  background: rgba(14, 139, 214, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Profile icon */
+.profile-icon {
+  font-size: 26px;   /* icon size */
+  color: #0a4a8c;
+  transition: 0.25s ease;
+}
+
+.profile-btn:hover .profile-icon {
+  color: #0e8bd6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .header {
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 24px;
+  }
+
+  .menu-btn {
+    font-size: 22px;
+  }
+
+  .profile-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .profile-icon {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .menu-btn {
+    font-size: 20px;
+  }
+
+  .profile-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profile-icon {
+    font-size: 20px;
+  }
+}

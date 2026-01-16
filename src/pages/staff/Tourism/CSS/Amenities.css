@@ -1,0 +1,193 @@
+/* ================= ROOT ================= */
+.sa-root {
+    width: 97%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: "Segoe UI", system-ui;
+    background: linear-gradient(135deg, #e0f2f1, #b2dfdb, #80cbc4);
+  }
+  
+  /* ================= TITLE ================= */
+  .sa-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  /* ================= FILTER BAR ================= */
+  .sa-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .sa-filter-bar input,
+  .sa-filter-bar select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .sa-filter-bar button,
+  .sa-add-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transition: 0.2s;
+  }
+  
+  .sa-filter-bar button:hover,
+  .sa-add-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+  
+  /* ================= FORM ================= */
+  .sa-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sa-form input,
+  .sa-form select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .sa-submit-btn {
+    background: #059669;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .sa-submit-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+  
+  .sa-cancel-btn {
+    background: #b91c1c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* ================= AMENITIES GRID ================= */
+  .sa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+  }
+  
+  /* ================= CARD STYLES ================= */
+  .sa-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 14px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    color: #1e3c72;
+  }
+  
+  /* ===== PASTEL REPEATING COLORS LIKE USER PAGE ===== */
+  .sa-card:nth-child(15n+1)  { background: rgba(255, 183, 197, 0.35); }
+  .sa-card:nth-child(15n+2)  { background: rgba(186, 225, 255, 0.35); }
+  .sa-card:nth-child(15n+3)  { background: rgba(198, 255, 218, 0.35); }
+  .sa-card:nth-child(15n+4)  { background: rgba(255, 243, 186, 0.35); }
+  .sa-card:nth-child(15n+5)  { background: rgba(221, 198, 255, 0.35); }
+  .sa-card:nth-child(15n+6)  { background: rgba(255, 210, 186, 0.35); }
+  .sa-card:nth-child(15n+7)  { background: rgba(186, 255, 255, 0.35); }
+  .sa-card:nth-child(15n+8)  { background: rgba(255, 204, 229, 0.35); }
+  .sa-card:nth-child(15n+9)  { background: rgba(210, 255, 210, 0.35); }
+  .sa-card:nth-child(15n+10) { background: rgba(255, 229, 186, 0.35); }
+  .sa-card:nth-child(15n+11) { background: rgba(210, 210, 255, 0.35); }
+  .sa-card:nth-child(15n+12) { background: rgba(255, 214, 214, 0.35); }
+  .sa-card:nth-child(15n+13) { background: rgba(234, 255, 209, 0.35); }
+  .sa-card:nth-child(15n+14) { background: rgba(255, 223, 239, 0.35); }
+  .sa-card:nth-child(15n+15) { background: rgba(204, 236, 255, 0.35); }
+  
+  .sa-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  }
+  
+  /* ================= ICON ================= */
+  .sa-icon {
+    font-size: 36px;
+  }
+  
+  /* ================= CARD BUTTONS ================= */
+  .sa-card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  
+  .sa-edit-btn {
+    background: #f5a623;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .sa-delete-btn {
+    background: #b91c1c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* ================= NO RESULTS ================= */
+  .sa-no-results {
+    grid-column: 1/-1;
+    text-align: center;
+    color: #555;
+    font-weight: 600;
+  }
+  
+  /* ================= RESPONSIVE ================= */
+  @media(max-width: 480px) {
+    .sa-card {
+      padding: 12px;
+    }
+  
+    .sa-icon {
+      font-size: 28px;
+    }
+  
+    .sa-filter-bar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  

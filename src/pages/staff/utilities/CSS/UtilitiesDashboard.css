@@ -1,0 +1,150 @@
+.ud-root {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 28px 24px;
+    padding-top: 10px;
+    background: linear-gradient(135deg, #e0f2f1, #b2dfdb, #80cbc4);
+    font-family: "Segoe UI", system-ui;
+}
+
+.ud-container {
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.ud-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.ud-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1e2a47;
+}
+
+.ud-header p {
+    font-size: 16px;
+    color: #495d7f;
+    margin-top: 6px;
+}
+
+/* GRID */
+.ud-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* CARD BASE */
+.ud-card {
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
+    border: 1px solid rgba(200,200,200,.35);
+    box-shadow: 0 12px 28px rgba(0,0,0,.08);
+    padding: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: default;
+}
+
+.ud-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 34px rgba(0,0,0,.14);
+}
+
+/* Icons */
+.ud-card-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* Stats Value */
+.ud-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e2a47;
+}
+
+/* Section Titles */
+.ud-section-title {
+    color: #1e2a47;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 20px 0 12px;
+}
+
+/* Table */
+.ud-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+.ud-table th,
+.ud-table td {
+    padding: 14px 12px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.ud-table th {
+    background: rgba(30, 60, 114, 0.12);
+    color: #1e2a47;
+    font-weight: 700;
+}
+
+.ud-table tr {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.ud-status {
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    min-width: 80px;
+    display: inline-block;
+    text-align: center;
+}
+
+.ud-ok { background: #daf7e3; color: #0f7b2c; }
+.ud-warn { background: #fff3cd; color: #a17800; }
+.ud-bad { background: #ffd6d6; color: #9b1111; }
+
+/* Quick Action Cards hover */
+.ud-quick-card {
+    cursor: pointer;
+}
+.ud-quick-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 36px rgba(0,0,0,.18);
+}
+
+/* Buttons removed since quick cards clickable */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ud-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .ud-header h1 { font-size: 28px; }
+    .ud-header p { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+    .ud-grid {
+        grid-template-columns: 1fr;
+    }
+    .ud-card { padding: 16px; }
+    .ud-header h1 { font-size: 24px; }
+    .ud-header p { font-size: 14px; }
+}
