@@ -1,0 +1,16 @@
+/* GLOBAL RESET — LIGHT + SAFE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* KEEP BODY CLEAN */
+body {
+  min-height: 100vh;
+  background: #f5f6fa;
+  color: #222;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* DO NOT STYLE TAGS GLOBALLY */
